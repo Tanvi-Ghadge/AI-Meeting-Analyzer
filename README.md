@@ -24,12 +24,25 @@ MeetIQ is an AI-powered solution that transforms raw meeting data into actionabl
 
 
 ## Screenshots
+**Signup Screen**
 ![Signup Screen](./screenshots/signup.png)
+
+**Login Screen**
 ![Login Screen](./screenshots/login.png)
+
+**Dashboard**
 ![Dashboard](./screenshots/dashboard.png)
+
+**File Selection**
 ![File Selection](./screenshots/upload-transcript.png)
+
+**Summary Options**
 ![Summary Options](./screenshots/summary-dropdown.png)
+
+**Summary and Keyword Extraction**
 ![Summary and Keyword Extraction](./screenshots/summary.png)
+
+**PDF Export**
 ![PDF Export](./screenshots/pdf-export.png)
 
 ## Installation
