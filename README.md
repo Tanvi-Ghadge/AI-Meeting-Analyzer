@@ -10,7 +10,7 @@ MeetIQ is an AI-powered tool that generates meeting summaries, extracts key keyw
 - **File Upload:** Easily upload and process meeting data.
 
 ## Technologies Used
-- **Backend:** Node.js, Express.js, MongoDB
+- **Backend:** Node.js, Express.js, MongoDB,Multer, JSON Web Tokens, PDFKit
 - **Frontend:** React, Vite, Tailwind CSS, Zustand
 
 
