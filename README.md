@@ -10,16 +10,16 @@ MeetIQ is an AI-powered solution that transforms raw meeting data into actionabl
 
 ## Technologies Used
 - **Backend:**
-  Node.js & Express.js: Core runtime and framework for building a robust server.
-  MongoDB: A flexible NoSQL database for storing user and meeting data.
-  Multer: Middleware for handling file uploads.
-  JSON Web Tokens: Secure token-based authentication for managing user sessions.
-  PDFKit: Generate dynamic PDFs of meeting summaries.
+  - **Node.js & Express.js**: Core runtime and framework for building a robust server.
+  - **MongoDB:** A flexible NoSQL database for storing user and meeting data.
+  - **Multer:** Middleware for handling file uploads.
+  - **JSON Web Tokens:** Secure token-based authentication for managing user sessions.
+  - **PDFKit:** Generate dynamic PDFs of meeting summaries.
 
 - **Frontend:**
-  React & Vite: Fast, modern frameworks for building a responsive and efficient user interface.
-  Tailwind CSS : Utility-first CSS frameworks for sleek, customizable designs.
-  Zustand: Lightweight state management to handle application data seamlessly.
+  - **React & Vite:** Fast, modern frameworks for building a responsive and efficient user interface.
+  - **Tailwind CSS :** Utility-first CSS frameworks for sleek, customizable designs.
+  - **Zustand:** Lightweight state management to handle application data seamlessly.
 
 
 
