@@ -1,17 +1,26 @@
-# AI Meeting Analyzer
+# MeetIQ
 
-MeetIQ is an AI-powered tool that generates meeting summaries, extracts key keywords, and exports the summaries as PDFs. It features secure user authentication (login, signup, logout) and an intuitive interface.
-
+MeetIQ is an AI-powered solution that transforms raw meeting data into actionable insights. By automatically generating detailed summaries, extracting key keywords, and exporting results as PDFs, MeetIQ streamlines your meeting workflows while ensuring secure user authentication and an intuitive user experience.
 ## Features
-- **User Authentication:** Secure login, signup, and logout.
-- **Meeting Summaries:** Generate multiple types of summaries.
-- **Keyword Extraction:** Automatically extract important keywords.
-- **PDF Export:** Download summaries as PDFs.
-- **File Upload:** Easily upload and process meeting data.
+- **Secure User Authentication:** Robust login, signup, and logout processes ensure that your data remains protected.
+- **Dynamic Meeting Summaries:** Automatically generate multiple types of summaries tailored to your meeting's unique context.
+- **Intelligent Keyword Extraction:** Identify the most important keywords and action items from your discussions.
+- **PDF Export:** Easily download your meeting summaries as high-quality PDFs for sharing and record-keeping.
+- **Effortless File Upload:** Quickly upload and process meeting data to kickstart the analysis.
 
 ## Technologies Used
-- **Backend:** Node.js, Express.js, MongoDB,Multer, JSON Web Tokens, PDFKit
-- **Frontend:** React, Vite, Tailwind CSS, Zustand
+- **Backend:**
+  Node.js & Express.js: Core runtime and framework for building a robust server.
+  MongoDB: A flexible NoSQL database for storing user and meeting data.
+  Multer: Middleware for handling file uploads.
+  JSON Web Tokens: Secure token-based authentication for managing user sessions.
+  PDFKit: Generate dynamic PDFs of meeting summaries.
+
+- **Frontend:**
+  React & Vite: Fast, modern frameworks for building a responsive and efficient user interface.
+  Tailwind CSS : Utility-first CSS frameworks for sleek, customizable designs.
+  Zustand: Lightweight state management to handle application data seamlessly.
+
 
 
 ## Screenshots
