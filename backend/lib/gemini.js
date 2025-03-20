@@ -16,13 +16,13 @@ export async function generateSummaryAndActions(transcript, type) {
     let prompt;
     switch (type) {
       case "basic":
-        prompt = `Provide a concise summary for the following meeting transcript:\n\n${transcript}`;
+        prompt = `Provide a well-structured and neatly formatted summary of the following meeting transcript, ensuring clarity and professionalism without any unnecessary symbols or special characters.\n\n${transcript}`;
         break;
       case "advanced":
-        prompt = `Provide a detailed and insightful summary for the following meeting transcript:\n\n${transcript}`;
+        prompt = `Provide a detailed and well-structured summary of the following meeting transcript in a clear and professional format. Ensure the summary is insightful and properly formatted without any unnecessary symbols or special characters.\n\n${transcript}`;
         break;
       case "bulletin":
-        prompt = `Extract key points from the following meeting transcript and list them as bullet points:\n\n${transcript}`;
+        prompt = `Extract the key points from the following meeting transcript and present them as a well-structured list using bullet points. Ensure the formatting is clear, professional, and visually appealing without any unnecessary symbols or special characters.\n\n${transcript}`;
         break;
       default:
         throw new Error(

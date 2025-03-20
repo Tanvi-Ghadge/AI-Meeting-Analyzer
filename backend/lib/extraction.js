@@ -13,7 +13,7 @@ export async function extractKeywords(transcript) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const prompt = `Extract the significant keywords from the following meeting transcript:\n\n${transcript}`;
+    const prompt = `Extract the significant keywords from the following meeting transcript and present them in a clear, well-structured, and visually appealing format. Ensure the formatting is professional and free from any unnecessary symbols or special characters.\n\n${transcript}`;
 
     const result = await model.generateContent(prompt);
     return result.response.text();
@@ -27,7 +27,7 @@ export async function extractDueDates(transcript) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const prompt = `Extract any due dates mentioned in the following meeting transcript along with tasks for due date:\n\n${transcript}`;
+    const prompt = `Extract all due dates mentioned in the following meeting transcript along with their corresponding tasks. Present the information in a clear, structured, and professional format without any unnecessary symbols or special characters.\n\n${transcript}`;
 
     const result = await model.generateContent(prompt);
     return result.response.text();
@@ -41,8 +41,7 @@ export async function extractTasks(transcript) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const prompt = `Extract all tasks from the following meeting transcript. 
-Tasks are marked by phrases such as "Task:" or "Action Item" .mark all the tasks in bulletins:\n\n${transcript}`;
+    const prompt = `Extract all tasks from the following meeting transcript, specifically those marked by phrases such as "Task:" or "Action Item." Present them in a well-structured and professional bullet-point format, ensuring clarity and readability without any unnecessary symbols or special characters.:\n\n${transcript}`;
 
     const result = await model.generateContent(prompt);
     return result.response.text();
@@ -56,8 +55,7 @@ export async function extractPriorityList(transcript) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const prompt = `Extract any sentences from the following meeting transcript that mention task priority and return them in the format of
-(such as "high priority", "medium priority", or "low priority"):\n\n${transcript}`;
+    const prompt = `Extract all sentences from the following meeting transcript that mention task priority (such as "high priority," "medium priority," or "low priority"). Present them in a clear, structured, and professional format, ensuring readability without any unnecessary symbols or special characters.\n\n${transcript}`;
 
     const result = await model.generateContent(prompt);
     return result.response.text();
