@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { path } from "pdfkit";
+// import { path } from "pdfkit";
 
 export const generateToken = (userId, res) => {
   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
