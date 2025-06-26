@@ -3,7 +3,7 @@ import path from "path";
 import Meeting from "../models/meeting.model.js";
 import Summary from "../models/summary.model.js";
 import PDFDocument from "pdfkit";
-import { generateSummaryAndActions } from "../lib/gemini.js";
+import { generateSummaryAndActions } from "../lib/cohere.js";
 import {
   extractDueDates,
   extractKeywords,

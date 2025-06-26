@@ -1,18 +1,21 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+
+
+import cohere from "cohere-ai";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
+
+
+const co = new cohere.CohereClientV2(process.env.CO_API_KEY);
+
 
 export async function generateSummaryAndActions(transcript, type) {
   try {
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
+    
     let prompt;
     switch (type) {
       case "basic":
@@ -30,10 +33,14 @@ export async function generateSummaryAndActions(transcript, type) {
         );
     }
 
-    const result = await model.generateContent(prompt);
-    return result.response.text();
+    const response = await co.chat({
+      model: "command-r-plus",
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    return response.message.content[0].text.trim();
   } catch (error) {
-    console.error("Error generating summary:", error);
+    console.error("Cohere generateresponse error:", error);
     return null;
   }
 }
