@@ -19,7 +19,7 @@ app.use(
 app.use("/api/auth", authrouter);
 app.use("/api/meeting", router);
 app.get("/api/ping", (req, res) => {
-  res.send("cron-js");
+  res.send("uptime");
 });
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
