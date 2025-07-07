@@ -10,12 +10,25 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+const allowedOrigins = [
+  "https://ai-meeting-analyzer-vrdj.vercel.app",
+  "http://localhost:5173",
+];
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS not allowed for origin: " + origin));
+      }
+    },
     credentials: true,
   })
 );
+
+app.options("*", cors());
 app.use("/api/auth", authrouter);
 app.use("/api/meeting", router);
 app.get("/api/ping", (req, res) => {
