@@ -34,7 +34,7 @@ export async function generateSummaryAndActions(transcript, type) {
     }
 
     const response = await co.chat({
-      model: "command-r-plus",
+      model: "command-r-plus-08-2024",
       messages: [{ role: "user", content: prompt }],
     });
 

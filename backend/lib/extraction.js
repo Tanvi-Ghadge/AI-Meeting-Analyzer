@@ -88,7 +88,7 @@ export async function extractKeywords(transcript) {
     const prompt = `Extract the significant keywords from the following meeting transcript and present them in a clear, well-structured, and visually appealing format. Ensure the formatting is professional and free from any unnecessary symbols or special characters.\n\n${transcript}`;
 
     const response = await co.chat({
-      model: "command-r-plus",
+      model: "command-r-plus-08-2024",
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -104,7 +104,7 @@ export async function  extractDueDates(transcript) {
     const prompt = `Extract all due dates mentioned in the following meeting transcript along with their corresponding tasks. Present the information in a clear, structured, and professional format without any unnecessary symbols or special characters.\n\n${transcript}`;
 
     const response = await co.chat({
-      model: "command-r-plus",
+      model: "command-r-plus-08-2024",
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -120,7 +120,7 @@ export async function extractTasks(transcript) {
     const prompt = `Extract all tasks from the following meeting transcript, specifically those marked by phrases such as "Task:" or "Action Item." Present them in a well-structured and professional bullet-point format, ensuring clarity and readability without any unnecessary symbols or special characters.:\n\n${transcript}`;
 
     const response = await co.chat({
-      model: "command-r-plus",
+      model: "command-r-plus-08-2024",
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -136,7 +136,7 @@ export async function extractPriorityList(transcript) {
     const prompt = `Extract all sentences from the following meeting transcript that mention task priority (such as "high priority," "medium priority," or "low priority"). Present them in a clear, structured, and professional format, ensuring readability without any unnecessary symbols or special characters.\n\n${transcript}`;
 
     const response = await co.chat({
-      model: "command-r-plus",
+      model: "command-r-plus-08-2024",
       messages: [{ role: "user", content: prompt }],
     });
 
